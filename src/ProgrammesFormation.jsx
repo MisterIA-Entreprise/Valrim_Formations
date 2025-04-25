@@ -93,6 +93,38 @@ const ProgrammesFormation = () => {
     </div>
   );
   
+  // Fonction pour obtenir le bon nombre de groupes en fonction du nom de session
+  const getGroupCount = (programName) => {
+    const groupCounts = {
+      "GPT'Immo": 2,
+      "GPT'Gestion": 2,
+      "GPT'Location": 2,
+      "GPT'Compta": 1,
+      "GPT'Accueil": 1,
+      "GPT'Projet": 2,
+      "GPT'Promo": 2,
+      "GPT'Patrimoine": 1,
+      "GPT'Support": 2
+    };
+    return groupCounts[programName] || 2;
+  };
+
+  // Fonction pour obtenir le bon nom de session à afficher
+  const getSessionName = (programName) => {
+    const sessionNames = {
+      "GPT'Immo": "Commerciaux des Agences Immobilières",
+      "GPT'Gestion": "Syndics - Gestion de copropriété",
+      "GPT'Location": "Gestion locative",
+      "GPT'Compta": "Comptabilité",
+      "GPT'Accueil": "Personnel d'accueil",
+      "GPT'Projet": "Montage d'opérations",
+      "GPT'Promo": "Promotion immobilière - Commerciaux",
+      "GPT'Patrimoine": "Chargés de patrimoine",
+      "GPT'Support": "Holding (fonctions support)"
+    };
+    return sessionNames[programName] || subtitle;
+  };
+  
   // Rendu de l'onglet Accueil
   const renderAccueil = () => (
     <div className="bg-white p-6 rounded-lg shadow-md">
@@ -136,6 +168,58 @@ const ProgrammesFormation = () => {
         <p className="text-gray-700 mt-2">
           Tous nos programmes de formation sont conçus avec une approche pratique et opérationnelle, centrée sur des cas d'usage réels du secteur immobilier. Nos formateurs, experts à la fois en IA et en immobilier, adaptent le contenu aux spécificités de chaque métier et aux outils utilisés au quotidien par vos équipes.
         </p>
+      </div>
+      
+      <div className="mt-8">
+        <h3 className="text-xl font-semibold text-blue-700 mb-4">Récapitulatif des sessions</h3>
+        <div className="overflow-hidden rounded-lg border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 text-gray-600 uppercase">
+              <tr>
+                <th className="py-3 px-6">SESSION</th>
+                <th className="py-3 px-6 text-center">NOMBRE DE GROUPES</th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Commerciaux des Agences Immobilières</td>
+                <td className="py-4 px-6 text-center font-bold">2</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Syndics - Gestion de copropriété</td>
+                <td className="py-4 px-6 text-center font-bold">2</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Gestion locative</td>
+                <td className="py-4 px-6 text-center font-bold">2</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Comptabilité</td>
+                <td className="py-4 px-6 text-center font-bold">1</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Personnel d'accueil</td>
+                <td className="py-4 px-6 text-center font-bold">1</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Montage d'opérations</td>
+                <td className="py-4 px-6 text-center font-bold">2</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Promotion immobilière - Commerciaux</td>
+                <td className="py-4 px-6 text-center font-bold">2</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Chargés de patrimoine</td>
+                <td className="py-4 px-6 text-center font-bold">1</td>
+              </tr>
+              <tr className="hover:bg-gray-50">
+                <td className="py-4 px-6 font-medium">Holding (fonctions support)</td>
+                <td className="py-4 px-6 text-center font-bold">2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
@@ -193,18 +277,27 @@ const ProgrammesFormation = () => {
     ]
   };
 
-  // Rendu de l'onglet GPT'Immo
-  const renderGPTImmo = () => createProgrammeWithBullets(
-    gptImmoData.name,
-    gptImmoData.subtitle,
-    gptImmoData.sections,
-    gptImmoData.skills
-  );
-  
   // Fonction réutilisable pour créer un contenu de programme avec des listes à puces
   const createProgrammeWithBullets = (programName, subtitle, sections, skills) => (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold text-blue-700 mb-6">Programme "{programName}" - {subtitle}</h2>
+      
+      <div className="mb-8 overflow-hidden rounded-lg border border-gray-200">
+        <table className="w-full text-sm text-left">
+          <thead className="bg-gray-50 text-gray-600 uppercase">
+            <tr>
+              <th className="py-3 px-6 text-center">SESSION</th>
+              <th className="py-3 px-6 text-center">NOMBRE DE GROUPES</th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            <tr className="hover:bg-gray-50">
+              <td className="py-4 px-6 font-medium">{getSessionName(programName)}</td>
+              <td className="py-4 px-6 text-center font-bold text-xl">{getGroupCount(programName)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       
       <div className="space-y-6">
         {sections.map((section, index) => (
@@ -249,6 +342,14 @@ const ProgrammesFormation = () => {
     </div>
   );
 
+  // Rendu de l'onglet GPT'Immo
+  const renderGPTImmo = () => createProgrammeWithBullets(
+    gptImmoData.name,
+    gptImmoData.subtitle,
+    gptImmoData.sections,
+    gptImmoData.skills
+  );
+  
   // Données pour GPT'Gestion
   const gptGestionData = {
     name: "GPT'Gestion",
@@ -357,14 +458,6 @@ const ProgrammesFormation = () => {
       "Duis aute irure dolor in reprehenderit"
     ]
   };
-
-  // Rendu des onglets avec Lorem Ipsum
-  const renderLoremIpsum = (programName) => createProgrammeWithBullets(
-    programName,
-    loremIpsumTemplateData.subtitle,
-    loremIpsumTemplateData.sections,
-    loremIpsumTemplateData.skills
-  );
   
   // Données pour GPT'Location
   const gptLocationData = {
