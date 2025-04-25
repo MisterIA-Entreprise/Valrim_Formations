@@ -21,7 +21,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-immo')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-immo' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Immo
+              Commerciaux des Agences Immobilières
             </button>
           </li>
           <li>
@@ -29,7 +29,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-gestion')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-gestion' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Gestion
+              Syndics - Gestion de copropriété
             </button>
           </li>
           <li>
@@ -37,7 +37,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-compta')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-compta' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Compta
+              Comptabilité
             </button>
           </li>
           <li>
@@ -45,7 +45,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-promo')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-promo' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Promo
+              Promotion immobilière - Commerciaux
             </button>
           </li>
           <li>
@@ -53,7 +53,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-mo')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-mo' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Projet
+              Montage d'opérations
             </button>
           </li>
           <li>
@@ -61,7 +61,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-patrimoine')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-patrimoine' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Patrimoine
+              Chargés de patrimoine
             </button>
           </li>
           <li>
@@ -69,7 +69,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-location')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-location' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Location
+              Gestion locative
             </button>
           </li>
           <li>
@@ -77,7 +77,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-support')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-support' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Support
+              Holding (fonctions support)
             </button>
           </li>
           <li>
@@ -85,7 +85,7 @@ const ProgrammesFormation = () => {
               onClick={() => setActiveTab('gpt-accueil')}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${activeTab === 'gpt-accueil' ? 'bg-blue-700 text-white' : 'text-gray-700 hover:bg-blue-50'}`}
             >
-              GPT'Accueil
+              Personnel d'accueil
             </button>
           </li>
         </ul>
@@ -176,46 +176,66 @@ const ProgrammesFormation = () => {
           <table className="w-full text-sm text-left">
             <thead className="bg-gray-50 text-gray-600 uppercase">
               <tr>
-                <th className="py-3 px-6">SESSION</th>
-                <th className="py-3 px-6 text-center">NOMBRE DE GROUPES</th>
+                <th className="py-3 px-6">Nom de la session</th>
+                <th className="py-3 px-6 text-center">Nombre de groupes</th>
+                <th className="py-3 px-6">Nombre de personnes</th>
+                <th className="py-3 px-6">Nom du programme</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Commerciaux des Agences Immobilières</td>
                 <td className="py-4 px-6 text-center font-bold">2</td>
+                <td className="py-4 px-6">32 personnes</td>
+                <td className="py-4 px-6">GPT'Immo</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Syndics - Gestion de copropriété</td>
                 <td className="py-4 px-6 text-center font-bold">2</td>
+                <td className="py-4 px-6">26 personnes</td>
+                <td className="py-4 px-6">GPT'Gestion</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Gestion locative</td>
                 <td className="py-4 px-6 text-center font-bold">2</td>
+                <td className="py-4 px-6">21 personnes</td>
+                <td className="py-4 px-6">GPT'Location</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Comptabilité</td>
                 <td className="py-4 px-6 text-center font-bold">1</td>
+                <td className="py-4 px-6">13 personnes</td>
+                <td className="py-4 px-6">GPT'Compta</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Personnel d'accueil</td>
                 <td className="py-4 px-6 text-center font-bold">1</td>
+                <td className="py-4 px-6">10 personnes</td>
+                <td className="py-4 px-6">GPT'Accueil</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Montage d'opérations</td>
                 <td className="py-4 px-6 text-center font-bold">2</td>
+                <td className="py-4 px-6">20 personnes</td>
+                <td className="py-4 px-6">GPT'Projet</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Promotion immobilière - Commerciaux</td>
                 <td className="py-4 px-6 text-center font-bold">2</td>
+                <td className="py-4 px-6">18 personnes</td>
+                <td className="py-4 px-6">GPT'Promo</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Chargés de patrimoine</td>
                 <td className="py-4 px-6 text-center font-bold">1</td>
+                <td className="py-4 px-6">~10 personnes</td>
+                <td className="py-4 px-6">GPT'Patrimoine</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="py-4 px-6 font-medium">Holding (fonctions support)</td>
                 <td className="py-4 px-6 text-center font-bold">2</td>
+                <td className="py-4 px-6">18 personnes</td>
+                <td className="py-4 px-6">GPT'Support</td>
               </tr>
             </tbody>
           </table>
@@ -280,23 +300,51 @@ const ProgrammesFormation = () => {
   // Fonction réutilisable pour créer un contenu de programme avec des listes à puces
   const createProgrammeWithBullets = (programName, subtitle, sections, skills) => (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-blue-700 mb-6">Programme "{programName}" - {subtitle}</h2>
+      <h2 className="text-2xl font-bold text-blue-700 mb-6">Programme : {programName}</h2>
       
-      <div className="mb-8 overflow-hidden rounded-lg border border-gray-200">
-        <table className="w-full text-sm text-left">
-          <thead className="bg-gray-50 text-gray-600 uppercase">
-            <tr>
-              <th className="py-3 px-6 text-center">SESSION</th>
-              <th className="py-3 px-6 text-center">NOMBRE DE GROUPES</th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            <tr className="hover:bg-gray-50">
-              <td className="py-4 px-6 font-medium">{getSessionName(programName)}</td>
-              <td className="py-4 px-6 text-center font-bold text-xl">{getGroupCount(programName)}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="mb-8 bg-blue-50 p-6 rounded-lg">
+        <div className="font-medium text-lg">
+          Session "{subtitle}"
+        </div>
+        <div className="mt-1">
+          {programName === "GPT'Immo" && 
+            <div>32 personnes (16 transactionnaires + 16 commerciaux location)
+            <div>Format : 2 sessions</div></div>
+          }
+          {programName === "GPT'Gestion" && 
+            <div>26 personnes (18 gestionnaires + 8 assistantes)
+            <div>Format : 2 sessions</div></div>
+          }
+          {programName === "GPT'Location" && 
+            <div>21 personnes (13 en gestion locative + 4 de Habitat Dauphinois + 4 du Service demande de logements)
+            <div>Format : 2 sessions</div></div>
+          }
+          {programName === "GPT'Compta" && 
+            <div>13 personnes (comptables syndic + gestion locative)
+            <div>Format : 1 session</div></div>
+          }
+          {programName === "GPT'Accueil" && 
+            <div>10 personnes environ
+            <div>Option : Création d'un groupe ad hoc selon les effectifs</div></div>
+          }
+          {programName === "GPT'Projet" && 
+            <div>20 personnes (chefs de projets / chargés d'opérations)
+            <div>Structures concernées : Immobilière Valrim, Habitat Dauphinois, Valrim Aménagement</div>
+            <div>Format : 2 sessions</div></div>
+          }
+          {programName === "GPT'Promo" && 
+            <div>18 personnes (12 commerciaux promotion + 1 commercial bailleur social + 1 commercial + 4 commerciaux maison individuelle)
+            <div>Format : 2 sessions</div></div>
+          }
+          {programName === "GPT'Patrimoine" && 
+            <div>~10 personnes (chargés de secteur, gestion du patrimoine bâti)
+            <div>Format : 1 session</div></div>
+          }
+          {programName === "GPT'Support" && 
+            <div>18 personnes (fonctions support, RH, informatique, direction)
+            <div>Format : 2 sessions dont un programme spécifique pour les dirigeants/direction</div></div>
+          }
+        </div>
       </div>
       
       <div className="space-y-6">
