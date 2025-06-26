@@ -1371,13 +1371,13 @@ const ProgrammesFormation = () => {
         </div>
       )
     }},
-    'gpt-promo-mo': { name: "Prospection & Marketing", render: () => (
+    'gpt-promo-mo': { name: "Prospection & Montage", render: () => (
       <div>
-        <ProgramInfo programKey="gpt-promo-mo" title="Formation : Prospection & Marketing" />
+        <ProgramInfo programKey="gpt-promo-mo" title="Formation : Prospection & Montage" />
         {createProgrammeWithBullets(
           'gpt-promo-mo',
           "GPT'Promo",
-          "Prospection & Marketing",
+          "Prospection & Montage",
           gptPromoteurData.sections,
           gptPromoteurData.skills
         )}
@@ -1488,13 +1488,13 @@ const ProgrammesFormation = () => {
         </div>
       );
     }},
-    'gpt-promo-mo': { name: "Prospection & Marketing", render: () => (
+    'gpt-promo-mo': { name: "Prospection & Montage", render: () => (
       <div>
-        <ProgramInfo programKey="gpt-promo-mo" title="Formation : Prospection & Marketing" />
+        <ProgramInfo programKey="gpt-promo-mo" title="Formation : Prospection & Montage" />
         {createProgrammeWithBullets(
           'gpt-promo-mo',
           "GPT'Promo",
-          "Prospection & Marketing",
+          "Prospection & Montage",
           gptPromoteurData.sections,
           gptPromoteurData.skills
         )}
